@@ -9,7 +9,10 @@ import boto3
 path = '/root/workspace/upload_files_s3/demo'
 local_directory = os.path.dirname(path)
 bucket = "mydemobucket2574"
-destination = "demo"
+if sys.argv[1] == 'blue':
+  destination = "blue"
+else:
+  destination = "green"
 
 client = boto3.client('s3')
 
