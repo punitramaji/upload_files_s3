@@ -8,7 +8,7 @@ import boto3
 # from the command-l
 path = '/root/workspace/upload_files_s3/public/'
 local_directory = os.path.dirname(path)
-bucket = "mydemobucket2574"
+bucket = "fileuploaddemobucket"
 if sys.argv[1] == 'blue':
   destination = "blue"
 else:
