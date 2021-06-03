@@ -3,7 +3,6 @@
 import os
 import sys
 import boto3
-from django.conf import settings 
 
 path = 'public/'
 local_directory = os.path.dirname(path)
@@ -40,6 +39,6 @@ for root, dirs, files in os.walk(local_directory):
              #print "Unable to delete %s..." % s3_path
     except:
         print "Deleting %s..." % s3_path
-        client.delete_object(Bucket=settings.bucket, Key='s3_path/')
+        client.delete_object(Bucket="bucket", Key="destination")
         print "Uploading %s..." % s3_path
         client.upload_file(local_path, bucket, s3_path)
