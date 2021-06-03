@@ -3,6 +3,7 @@
 import os
 import sys
 import boto3
+from django.conf import settings 
 
 path = 'public/'
 local_directory = os.path.dirname(path)
