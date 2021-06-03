@@ -4,8 +4,6 @@ import os
 import sys
 import boto3
 
-# get an access token, local (from) directory, and S3 (to) directory
-# from the command-l
 path = 'public/'
 local_directory = os.path.dirname(path)
 bucket = "fileuploaddemobucket"
