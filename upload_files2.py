@@ -5,8 +5,11 @@ import sys
 import boto3
 
 # get an access token, local (from) directory, and S3 (to) directory
-# from the command-line
-local_directory, bucket, destination = sys.argv[1:4]
+# from the command-l
+path = '/root/workspace/upload_files_s3/demo'
+local_directory = os.path.dirname(path)
+bucket = "mydemobucket2574"
+destination = "demo"
 
 client = boto3.client('s3')
 
